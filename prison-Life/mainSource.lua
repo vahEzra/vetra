@@ -5,6 +5,8 @@
   KeyGuardLibrary.getLink() - Get link
 ]]
 
+game.Players.LocalPlayer:Kick("we are currently fixing this! | vetra)
+
 local KeyGuardLibrary = loadstring(game:HttpGet("https://cdn.keyguardian.org/library/v1.0.0.lua"))()
 local trueData = "467006a9964c441b8b8301b5d41657b4"
 local falseData = "a71db7d41c8d42f88ab1fb2dcdd9f832"
