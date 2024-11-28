@@ -1,11 +1,9 @@
-
 --[[
   KeyGuardLibrary.validateDefaultKey(key) - Validate key
   KeyGuardLibrary.validatePremiumKey(key) - Validate premium key
   KeyGuardLibrary.getService() - Get service
   KeyGuardLibrary.getLink() - Get link
 ]]
-
 
 local KeyGuardLibrary = loadstring(game:HttpGet("https://cdn.keyguardian.org/library/v1.0.0.lua"))()
 local trueData = "467006a9964c441b8b8301b5d41657b4"
@@ -53,9 +51,9 @@ local Checkkey = Tabs.KeySys:AddButton({
 	Callback = function()
 		local response = KeyGuardLibrary.validateDefaultKey(key)
 		if response == trueData then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/vahEzra/rayfield/refs/heads/main/main/source2.lua')()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/vahEzra/rayfield/refs/heads/main/main/source2.lua'))()
 		else
-			
+			warn("Invalid Key!")
 		end
 	end
 })
@@ -65,6 +63,7 @@ local Getkey = Tabs.KeySys:AddButton({
 	Description = "Get Key here",
 	Callback = function()
 		setclipboard(KeyGuardLibrary.getLink())
+		print("Key link copied to clipboard.")
 	end
 })
 
